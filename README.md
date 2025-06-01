@@ -1,4 +1,4 @@
-# CASIA-M3 Linear Regression Analysis
+Linear Regression Analysis
 
 This project contains a Jupyter Notebook that applies **linear regression** analysis to the **CASIA-M3 dataset**, with a focus on exploring relationships between facial expression features and numerical outcomes.
 
