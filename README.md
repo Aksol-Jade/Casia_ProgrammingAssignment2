@@ -1,51 +1,69 @@
-Linear Regression Analysis
+---
 
-This project contains a Jupyter Notebook that applies **linear regression** analysis to the **CASIA-M3 dataset**
-
-## 📊 Project Goals
-- Perform regression analysis on CASIA-M3 expression data
-- Identify correlations between expressions and quantified labels
-- Visualize prediction performance and model diagnostics
-
-## 📁 Dataset Description
-
-The **CASIA-M3 dataset** includes facial expression recordings from multiple subjects, typically categorized by emotional class or response. For this analysis, expression features are either extracted beforehand or numerically encoded from the dataset.
-
-## 🔍 Notebook Highlights
-
-- **Data Preparation**: Load and clean CSV or structured data files
-- **Feature Selection**: Choose expression-based features for regression
-- **Model Training**: Use `scikit-learn`'s `LinearRegression` model
-- **Evaluation Metrics**: MSE, MAE, R² Score
-- **Visualization**: Scatter plots, residuals, and actual vs. predicted graphs
-
-## 📈 Tools Used
-
-- Python 3
-- Pandas / NumPy
-- Matplotlib / Seaborn
-- Scikit-learn
-
-## 🚀 How to Use
-
-1. Ensure the CASIA-M3 data is available in `.csv` or compatible format
-2. Open `casia_fernandez_m3_linear_regression.ipynb`
-3. Run all cells to load data, train the model, and visualize results
-
-## 📌 Requirements
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
-```
-
-## 🧠 Insights
-This notebook provides insight into the linear relationships between facial expression features and assigned scores. Useful for:
-- Building baselines for regression-based emotion recognition
-- Verifying feature relevance before deep model development
-
-## 📄 License
-This notebook is for educational and research use. Use of the CASIA-M3 dataset must comply with its respective license.
+# Linear Regression with Ridge Regularization
 
 ---
 
-**Author:** Axle Casia, Joseph Fernandez
-**Last Updated:** 2025
+## Project Overview
+
+This notebook demonstrates the application of linear regression using Ridge regularization. The goal is to model and evaluate the relationship between audio or track-related features and a target outcome (e.g., stream count), addressing multicollinearity and overfitting through regularization.
+
+---
+
+## Objectives
+
+* Prepare and explore a music-related dataset.
+* Apply Ridge regression to predict a target variable.
+* Evaluate model performance using appropriate metrics.
+* Visualize residuals and key regression diagnostics.
+
+---
+
+## Key Steps
+
+### 1. Data Preparation
+
+* Import necessary libraries and dependencies.
+* Explore feature distributions and check for missing values.
+* Perform any required preprocessing or normalization.
+
+### 2. Dataset Splitting
+
+* Separate data into training and testing sets using scikit-learn's `train_test_split`.
+
+### 3. Ridge Regression Implementation
+
+* Use `Ridge` from `sklearn.linear_model` to fit a regularized linear model.
+* Experiment with hyperparameter tuning via the `alpha` parameter.
+
+### 4. Evaluation Metrics
+
+* Mean Squared Error (MSE)
+* R-squared (R²)
+* Residual plot visualization
+
+---
+
+## Tools and Technologies
+
+* **Python Libraries**: pandas, numpy, matplotlib, seaborn, scikit-learn
+* **Modeling Technique**: Ridge Regression
+* **Validation Approach**: Train-test split
+
+---
+
+## Insights
+
+* Regularization helps mitigate overfitting in high-dimensional datasets or datasets with multicollinearity.
+* Ridge regression retains all features but penalizes large coefficients, leading to more stable and interpretable models.
+* Visualization of residuals allows for diagnosing potential model misspecifications.
+
+---
+
+## Next Steps
+
+* Consider comparing with Lasso or ElasticNet to evaluate coefficient sparsity.
+* Explore cross-validation to optimize the regularization parameter.
+* Expand feature engineering for deeper model insights.
+
+---
